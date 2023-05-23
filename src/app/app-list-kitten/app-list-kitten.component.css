@@ -1,0 +1,160 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.adopt-title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 15px;
+    border-bottom: 1px white solid;
+
+
+}
+
+.kitten-item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.image-container {
+    height: 9rem;
+    padding-top: 2rem;
+
+}
+
+.Image {
+
+    background-color: rgb(155, 160, 160);
+    margin: .5rem;
+    height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+    transition: transform 0.3s;
+    border: 1px white solid;
+    border-radius: .1rem;
+    cursor: pointer;
+}
+
+.kittenData {
+    width: 7.5rem;
+    height: 2rem;
+    margin-top: 10px;
+    padding: 5px;
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(28, 74, 114, 0.6);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+}
+
+.Image:hover {
+
+    transform: scale(7);
+}
+
+.adopted-image {
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+
+}
+
+.adopted-image:hover+.kittenData {
+
+    opacity: 1;
+
+}
+
+.Adopt-kitten {
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    /* display: flex; */
+    list-style: none;
+    justify-content: center;
+    margin: 5px;
+}
+
+
+.Adopt-List {
+    /* flex: 1; */
+    color: white;
+    background-color: rgb(28, 74, 114);
+    border-radius: 15px;
+
+}
+
+.adopt-title {
+    display: flex;
+    justify-content: center;
+
+}
+
+.adopted-title {
+    text-align: center;
+    display: flex;
+    margin: 15px;
+    border-bottom: 1px white solid;
+    justify-content: center;
+}
+
+.adopted-kittens {
+    color: white;
+    background-color: rgb(203, 135, 210);
+    border-radius: 15px;
+    flex: 1;
+
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f666b3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 8rem;
+    display: flex;
+}
+
+.Miaouci {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f666b3;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.Miaouci.show {
+    display: block;
+    opacity: 1;
+}
+
+.adopted-kitten-list {
+
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

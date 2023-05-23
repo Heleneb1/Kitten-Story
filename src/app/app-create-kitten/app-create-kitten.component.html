@@ -1,0 +1,60 @@
+<div class="Create">
+    <h2 class="CreateTitle">Ajoute un nouveau chaton à adopter !!!!</h2>
+    <div class="CreateKitten">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <fieldset>
+                <label for="create-name">Name </label>
+                <input id="create-name" name="create-name" type="text" [(ngModel)]="model.name" #name="ngModel" required
+                    minlength="3" maxlength="15" />
+            </fieldset>
+
+            <!-- Message d'erreurs de name -->
+            <div *ngIf="myForm.submitted && name.errors">
+                <span *ngIf="name.errors?.['required']">Champs requis</span>
+                <span *ngIf="name.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+                <span *ngIf="myForm.submitted && name.errors?.['maxlength']">La longueur maximale doit être inférieure à
+                    15</span>
+            </div>
+            <fieldset>
+                <label for="create-race">Race </label>
+                <input id="create-race" name="create-race" type="text" [(ngModel)]="model.race" #race="ngModel" required
+                    minlength="3" maxlength="15" />
+            </fieldset>
+
+            <!-- Message d'erreurs de race -->
+            <div *ngIf="myForm.submitted && race.errors">
+                <span *ngIf="race.errors?.['required']">Champs requis</span>
+                <span *ngIf="race.errors?.['minlength']">La longueur minimale doit être supérieure à 3</span>
+                <span *ngIf="myForm.submitted && race.errors?.['maxlength']">La longueur maximale doit être inférieure à
+                    15</span>
+            </div>
+
+            <fieldset>
+                <label for="create-birthday">Birthday </label>
+                <input id="create-birthday" name="create-birthday" type="date" pattern="\d{2}\/\d{2}\/\d{4}"
+                    [(ngModel)]="
+                    model.birthday" #birthday="ngModel" required minlength="8" maxlength="11" />
+            </fieldset>
+
+            <!-- Message d'erreurs de birthday -->
+            <div *ngIf="myForm.submitted && birthday.errors">
+                <span *ngIf="birthday.errors?.['required']">Champs requis</span>
+                <span *ngIf="birthday.errors?.['minlength']">La longueur minimale doit être supérieure à 11</span>
+                <span *ngIf="myForm.submitted && birthday.errors?.['maxlength']">La longueur maximale doit être
+                    inférieure à
+                    11</span>
+            </div>
+            <fieldset>
+                <label for="create-imageSrc">Image </label>
+                <input id="create-imageSrc" name="create-imageSrc" type="file" (change)="onImageSelected($event)"
+                    [(ngModel)]="model.imageSrc" #imageSrc="ngModel" required imageSrc accept="image/*" />
+
+            </fieldset>
+            <div class="CreateButton">
+                <button type="reset">Restaurer</button>
+                <button (click)="changeColor()" [ngClass]="{ activeButton: isActive }">Sauvegarder</button>
+            </div>
+        </form>
+    </div>
+</div>

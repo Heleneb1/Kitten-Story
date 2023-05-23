@@ -1,0 +1,9 @@
+.header {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(10, 104, 158);
+    margin-bottom: 3rem;
+    color: aliceblue;
+}

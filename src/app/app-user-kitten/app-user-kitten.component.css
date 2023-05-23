@@ -1,0 +1,40 @@
+.adopted-title {
+    display: flex;
+    margin: 15px;
+    border-bottom: 1px white solid;
+    justify-content: center;
+}
+
+.adopted-kittens {
+    color: white;
+    background-color: rgb(203, 135, 210);
+    border-radius: 15px;
+    flex: 1;
+}
+
+
+.Miaouci {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f666b3;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.Miaouci.show {
+    display: block;
+    opacity: 1;
+}
+
+.adopted-kitten-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}

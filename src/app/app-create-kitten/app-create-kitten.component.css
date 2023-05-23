@@ -1,0 +1,78 @@
+.CreateTitle {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.CreateKitten {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-top: #0A689E 1px solid;
+    padding: 10px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+fieldset {
+    margin-bottom: 10px;
+    width: 30rem
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90%;
+}
+
+.CreateButton {
+    display: flex;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc0cb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 8rem;
+    display: flex;
+}
+
+button[type="reset"] {
+    background-color: #0A689E;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #ff69b4;
+}
+
+/* Afficher l'image miniature */
+img {
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.activeButton {
+    background-color: #0A689E;
+}

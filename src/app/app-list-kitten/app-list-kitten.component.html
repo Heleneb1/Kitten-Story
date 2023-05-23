@@ -1,0 +1,33 @@
+<div class="Adopt-kitten">
+
+    <ul class="Adopt-List">
+        <h2 class="adopt-title">Chatons à adopter</h2>
+
+        <li class="list kitten-item" *ngFor="let kitten of kittenList">
+            <img class="Image" [src]="kitten?.imageSrc" [alt]="kitten.name" />
+            {{ kitten.name }} {{ kitten.race }}<br> Birthday :{{ kitten.birthday }}
+
+
+            <button (click)="adoptKitten(kitten)">Adopte-moi...</button>
+        </li>
+    </ul>
+    <div class="list-container">
+        <app-create-kitten class="list" (createKitten)="receiveNewKitten($event)"></app-create-kitten>
+    </div>
+    <div class="adopted-kittens">
+        <h2 class="adopted-title">Mes Chatons !!! </h2>
+        <ul>
+            <li class="adopted-kitten-list" *ngFor="let kittenAdopted of kittenAdopted">
+                <div class="image-container">
+                    <img class="adopted-image" [src]="kittenAdopted.imageSrc" [alt]="kittenAdopted.name" />
+                    <div class="kittenData">
+                        {{ kittenAdopted.name }} {{ kittenAdopted.race }} <br> {{ kittenAdopted.birthday }}
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="Miaouci" [ngClass]="{'show': miaouciVisible}">Miaouci !!!!</div>
+
+</div>
